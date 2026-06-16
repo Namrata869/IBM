@@ -1,57 +1,188 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Registration Form</title>
+    <title>Form & Table Toggle</title>
 </head>
 <body>
 
-    <h1>FORMS</h1>https://github.com/Namrata869/IBM/tree/main
+<!-- FORM SECTION -->
+<div id="formPage">
 
-    <form>
+    <h2>FORMS</h2>
 
-        <label>Name</label><br>
-        <input type="text" placeholder="Name"><br><br>
+    Name
+    <input type="text" placeholder="Name"><br><br>
 
-        <label>Email-id</label><br>
-        <input type="email" placeholder="Email-id"><br><br>
+    Email-id
+    <input type="email" placeholder="Email-id"><br><br>
 
-        <label>Password</label><br>
-        <input type="password" placeholder="Password"><br><br>
+    Password
+    <input type="password" placeholder="Password"><br><br>
 
-        <label>Language</label><br>
-        <input type="checkbox"> HTML <br>
-        <input type="checkbox"> CSS <br>
-        <input type="checkbox"> JS <br><br>
+    <p>Language</p>
+    <input type="radio" name="lang">HTML<br>
+    <input type="radio" name="lang">CSS<br>
+    <input type="radio" name="lang">JS<br><br>
 
-        <label>Course</label><br>
-        <input type="radio" name="course"> Java Stack <br>
-        <input type="radio" name="course"> Data Science <br>
-        <input type="radio" name="course"> Mern Stack <br><br>
+    <p>Course</p>
+    <input type="checkbox">Java Stack<br>
+    <input type="checkbox">Data Science<br>
+    <input type="checkbox">Mern Stack<br><br>
 
-        <label>Field:</label><br>
-        <select>
-            <option>Select</option>
-            <option>IT</option>
-            <option>CSE</option>
-            <option>ECE</option>
-        </select><br><br>
+    <p>Field:</p>
+    <select>
+        <option>Select</option>
+        <option>CSE</option>
+        <option>IT</option>
+        <option>Data Science</option>
+    </select>
 
-        <label>Describe yourself</label><br>
-        <textarea rows="5" cols="30"></textarea><br><br>
+    <br><br>
 
-        <label>Date</label><br>
-        <input type="date"><br><br>
+    <textarea placeholder="Describe yourself"></textarea>
 
-        <label>Phone No.</label><br>
-        <input type="tel" placeholder="Phone No."><br><br>
+    <br><br>
 
-        <input type="submit" value="Submit">
+    Date<br>
+    <input type="date">
 
-    </form>
+    <br><br>
 
-    <br>
+    Phone No.
+    <input type="tel" placeholder="Phone NO.">
 
-    <a href="Table.html">Click Here For Table File</a>
+    <br><br>
+
+    <input type="submit" value="submit">
+
+    <br><br>
+
+    <a href="#" onclick="showTable()">Click Here For Table File</a>
+
+</div>
+
+<!-- TABLE SECTION -->
+<div id="tablePage" style="display:none;">
+
+    <table border="1" width="100%">
+        <caption><h2>Data Table</h2></caption>
+
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+            <th>Phone No.</th>
+            <th>Pincode</th>
+        </tr>
+
+        <tr>
+            <td>Faheem</td>
+            <td>Noor</td>
+            <td>22</td>
+            <td>1234567890</td>
+            <td>193201</td>
+        </tr>
+
+        <tr>
+            <td>Tabish</td>
+            <td>Sofi</td>
+            <td>21</td>
+            <td>0123456789</td>
+            <td>190001</td>
+        </tr>
+
+        <tr>
+            <td>Inaam</td>
+            <td>Noor</td>
+            <td>20</td>
+            <td>2345678910</td>
+            <td>193101</td>
+        </tr>
+    </table>
+
+    <br><br>
+
+    <table border="1" width="100%">
+        <tr>
+            <th>College Name</th>
+            <td>SSM College</td>
+        </tr>
+
+        <tr>
+            <th>College Branch</th>
+            <td>B.Tech</td>
+        </tr>
+    </table>
+
+    <br><br>
+
+    <table border="1" width="100%">
+        <tr>
+            <th>Course</th>
+            <th>Contact Number</th>
+            <th>Date Of Joining</th>
+        </tr>
+
+        <tr>
+            <td>B.S.C</td>
+            <td>1234567890</td>
+            <td>22-5-2023</td>
+        </tr>
+
+        <tr>
+            <td>B.S.C</td>
+            <td>0987654321</td>
+            <td>23-5-2023</td>
+        </tr>
+
+        <tr>
+            <td>B.S.C</td>
+            <td>2345678901</td>
+            <td>24-5-2023</td>
+        </tr>
+
+        <tr>
+            <td>B.S.C</td>
+            <td>3452167890</td>
+            <td>25-5-2023</td>
+        </tr>
+    </table>
+
+    <br><br>
+
+    <table border="1" align="center">
+        <tr>
+            <th>Name</th>
+            <td>Faheem</td>
+            <td>Tabish</td>
+            <td>Inaam</td>
+        </tr>
+
+        <tr>
+            <th>Age</th>
+            <td>22</td>
+            <td>21</td>
+            <td>20</td>
+        </tr>
+    </table>
+
+    <br><br>
+
+    <a href="#" onclick="showForm()">Click Here For Form Page</a>
+
+</div>
+
+<script>
+function showTable() {
+    document.getElementById("formPage").style.display = "none";
+    document.getElementById("tablePage").style.display = "block";
+}
+
+function showForm() {
+    document.getElementById("tablePage").style.display = "none";
+    document.getElementById("formPage").style.display = "block";
+}
+</script>
 
 </body>
 </html>
